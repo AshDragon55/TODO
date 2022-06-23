@@ -5,3 +5,9 @@ import "../lib/collection.js";
 
 import './main.html';
 
+Template.nav.events({
+    'click UncompleteTask'(){
+        $("#UncompleteTask").removeClass("errorBox");
+    }
+});
+Template.main.events({});

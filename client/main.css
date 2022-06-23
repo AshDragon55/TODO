@@ -129,6 +129,7 @@ padding: 25px;
 .card .card-block,
 .card .card-body {
 padding: 30px 25px;
+background-color: #888;
 }
 .card.card-load {
 position: relative;
