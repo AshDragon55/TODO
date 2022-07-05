@@ -177,3 +177,7 @@ border-radius: 0;
 h6 {
   font-size: 14px;
 }
+.errorBox{
+  border: 2px solid red !important;
+
+}

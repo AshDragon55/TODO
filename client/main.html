@@ -5,75 +5,9 @@
 <body>
   <div class="container">
 {{> addtask}}
-    <div class="row">
-        <div class="col-xl-4 col-md-6">
-            <div class="card">
-                <div class="card-block">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-auto">
-                            <img class="img-fluid rounded-circle" style="width:70px;" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="dashboard-user">
-                        </div>
-                        <div class="col">
-                            <h5>Ray Baracuda</h5>
-                            <span>Web Developer</span>
-                        </div>
-                    </div>
-                    <ul class="task-list">
-                        <li>
-                            
-                            <i class="task-icon UncompleteTask"></i>
-                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
-                            <p class="text-muted">Lorem ipsum is dolorem…</p>
-                        </li>
-                        <li>
-                            <i class="task-icon bg-c-green"></i>
-                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
-                            <p class="text-muted">Lorem ipsum is dolorem…</p>
-                        </li>
-                        <li>
-                            <i class="task-icon bg-c-green"></i>
-                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
-                            <p class="text-muted">Lorem ipsum is dolorem…</p>
-                        </li>
-                
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-4 col-md-6">
-            <div class="card">
-                <div class="card-block">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-auto">
-                            <img class="img-fluid rounded-circle" style="width:70px;" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="dashboard-user">
-                        </div>
-                        <div class="col">
-                            <h5>Stven lowe</h5>
-                            <span>UX Designer</span>
-                        </div>
-                    </div>
-                    <ul class="task-list">
-                        <li>
-                            <i class="task-icon bg-c-green"></i>
-                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
-                            <p class="text-muted">Lorem ipsum is dolorem…</p>
-                        </li>
-                        <li>
-                            <i class="task-icon bg-c-green"></i>
-                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
-                            <p class="text-muted">Lorem ipsum is dolorem…</p>
-                        </li>
-                        <li>
-                            <i class="task-icon bg-c-green"></i>
-                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
-                            <p class="text-muted">Lorem ipsum is dolorem…</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
+{{> TaskProfile}}
+
+    <!-- <div class="row">
         <div class="col-xl-4 col-md-6">
             <div class="card">
                 <div class="card-block">
@@ -83,7 +17,7 @@
                         </div>
                         <div class="col">
                             <h5>Lisa Windflower </h5>
-                            <span>Graphic Designer</span>
+                            <span>App Developer</span>
                         </div>
                     </div>
                     <ul class="task-list">
@@ -115,7 +49,7 @@
                         </div>
                         <div class="col">
                             <h5>James Doe</h5>
-                            <span>UX Designer</span>
+                            <span>App Developer</span>
                         </div>
                     </div>
                     <ul class="task-list">
@@ -138,6 +72,78 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 </body>
+<template name="TaskProfile">
+    <div class="row">
+        <div class="col-xl-4 col-md-6">
+            <div class="card">
+                <div class="card-block">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-auto">
+                            <img class="img-fluid rounded-circle" style="width:70px;" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="dashboard-user">
+                        </div>
+                        <div class="col">
+                            <h5>Ray Baracuda</h5>
+                            <span>Lead App Developer</span>
+                        </div>
+                    </div>
+                    <ul class="task-list">
+                        {{#each ATask}}
+                        <li>
+                            
+                            <i class="task-icon UncompleteTask"></i>
+                            <h6>Anton Knudsen<span class="float-right text-muted">&nbsp;{{DueDate}}</span></h6>
+                            <p class="text-muted">{{Task}}</p>
+                        </li>
+                        {{/each}}
+                        <!-- <li>
+                            <i class="task-icon bg-c-green"></i>
+                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
+                            <p class="text-muted">Lorem ipsum is dolorem…</p>
+                        </li>
+                        <li>
+                            <i class="task-icon bg-c-green"></i>
+                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
+                            <p class="text-muted">Lorem ipsum is dolorem…</p>
+                        </li>
+                 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-xl-4 col-md-6">
+            <div class="card">
+                <div class="card-block">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-auto">
+                            <img class="img-fluid rounded-circle" style="width:70px;" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="dashboard-user">
+                        </div>
+                        <div class="col">
+                            <h5>Stven lowe</h5>
+                            <span>App Developer</span>
+                        </div>
+                    </div>
+                    <ul class="task-list">
+                        <li>
+                            <i class="task-icon bg-c-green"></i>
+                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
+                            <p class="text-muted">Lorem ipsum is dolorem…</p>
+                        </li>
+                        <li>
+                            <i class="task-icon bg-c-green"></i>
+                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
+                            <p class="text-muted">Lorem ipsum is dolorem…</p>
+                        </li>
+                        <li>
+                            <i class="task-icon bg-c-green"></i>
+                            <h6>Anton Knudsen<span class="float-right text-muted">14 MAY</span></h6>
+                            <p class="text-muted">Lorem ipsum is dolorem…</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</template>
